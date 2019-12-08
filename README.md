@@ -1,1 +1,1 @@
-# void
+# Void Linux automatic install scripts
