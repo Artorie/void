@@ -65,28 +65,17 @@ done
 
 #### Installing the base system
 { xbps-install -Sy -R http://alpha.de.repo.voidlinux.org/current -r /mnt \
-	base-files coreutils findutils diffutils util-linux \
-	pciutils usbutils \
+	base-files coreutils findutils diffutils util-linux pciutils usbutils \
 	grep sed which shadow psmisc tzdata iana-etc \
-	bash \
-	xbps runit-void \
+	bash xbps runit-void \
 	f2fs-tools dosfstools \
 	iproute2 iputils \
 	acpid eudev \
-	kmod linux5.4 dracut; }
-	### gzip gawk tar
-	### nvi (TEXT EDITOR)
-	### kbd traceroute
-
-#xbps-install -Sy -R http://alpha.de.repo.voidlinux.org/current -r /mnt base-files coreutils findutils diffutils bash grep sed util-linux which shadow f2fs-tools dosfstools psmisc procps-ng tzdata pciutils usbutils iana-etc kbd iproute2 iputils traceroute kmod acpid eudev      runit-void xbps linux5.4 dracut > /dev/null && echo Done!
-### ncurses dash file gawk less openssh nvi sudo void-artwork
-	### gzip tar man-pages mdocml
-	### e2fsprogs btrfs-progs xfsprogs
-	### dhcpcd wpa_supplicant
+	kmod linux5.4 dracut \
+	nano \
+	dhcpcd wpa_supplicant; }
+	### tar kbd traceroute
 	### iw (manipulating wifi card, possibly superseeded by iwd) wifi-firmware ethtool
-
-### Need to resolve Internet connectivity! (connect to router and DHCP)
-### Need to resolve text editor (nano!)
-### Need bootloader !!!
-### Need linux-firmware-* ??? (not sure if really needed for performance, CHECK FOR UCODE!)
+	### Need bootloader !!!
+	### Need linux-firmware-* ??? (not sure if really needed for performance, CHECK FOR UCODE!)
 
