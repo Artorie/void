@@ -64,5 +64,16 @@ while true; do
 done
 
 #### Installing the base system
-xbps-install -Sy -R http://alpha.de.repo.voidlinux.org/current -r /mnt base-files coreutils libgcc bash grep sed util-linux which shadow f2fs-tools dosfstools psmisc procps-ng tzdata pciutils usbutils iana-etc kbd iproute2 iputils traceroute kmod acpid eudev      runit-void xbps linux5.4 dracut > /dev/null && echo Done!
+xbps-install -Sy -R http://alpha.de.repo.voidlinux.org/current -r /mnt base-files coreutils findutils libgcc bash grep sed util-linux which shadow f2fs-tools dosfstools psmisc procps-ng tzdata pciutils usbutils iana-etc kbd iproute2 iputils traceroute kmod acpid eudev      runit-void xbps linux5.4 dracut > /dev/null && echo Done!
+### ncurses diffutils dash file gawk less openssh nvi sudo void-artwork
+	### gzip tar man-pages mdocml
+	### e2fsprogs btrfs-progs xfsprogs
+	### ??? tzdata iana-etc ??? (currently are included in my base installation script)
+	### dhcpcd wpa_supplicant
+	### iw (manipulating wifi card, possibly superseeded by iwd) wifi-firmware ethtool
+
+### Need to resolve Internet connectivity! (connect to router and DHCP)
+### Need to resolve text editor (nano!)
+### Need bootloader !!!
+### Need linux-firmware-* ??? (not sure if really needed for performance, CHECK FOR UCODE!)
 
