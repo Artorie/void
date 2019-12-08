@@ -64,11 +64,24 @@ while true; do
 done
 
 #### Installing the base system
-xbps-install -Sy -R http://alpha.de.repo.voidlinux.org/current -r /mnt base-files coreutils findutils libgcc bash grep sed util-linux which shadow f2fs-tools dosfstools psmisc procps-ng tzdata pciutils usbutils iana-etc kbd iproute2 iputils traceroute kmod acpid eudev      runit-void xbps linux5.4 dracut > /dev/null && echo Done!
-### ncurses diffutils dash file gawk less openssh nvi sudo void-artwork
+{ xbps-install -Sy -R http://alpha.de.repo.voidlinux.org/current -r /mnt \
+	base-files coreutils findutils diffutils util-linux \
+	pciutils usbutils \
+	grep sed which shadow psmisc tzdata iana-etc \
+	bash \
+	xbps runit-void \
+	f2fs-tools dosfstools \
+	iproute2 iputils \
+	acpid eudev \
+	kmod linux5.4 dracut; }
+	### gzip gawk tar
+	### nvi (TEXT EDITOR)
+	### kbd traceroute
+
+#xbps-install -Sy -R http://alpha.de.repo.voidlinux.org/current -r /mnt base-files coreutils findutils diffutils bash grep sed util-linux which shadow f2fs-tools dosfstools psmisc procps-ng tzdata pciutils usbutils iana-etc kbd iproute2 iputils traceroute kmod acpid eudev      runit-void xbps linux5.4 dracut > /dev/null && echo Done!
+### ncurses dash file gawk less openssh nvi sudo void-artwork
 	### gzip tar man-pages mdocml
 	### e2fsprogs btrfs-progs xfsprogs
-	### ??? tzdata iana-etc ??? (currently are included in my base installation script)
 	### dhcpcd wpa_supplicant
 	### iw (manipulating wifi card, possibly superseeded by iwd) wifi-firmware ethtool
 
